@@ -197,7 +197,7 @@ chart = (
     .mark_bar()
     .encode(
         x=alt.X("カテゴリ:N", title="金融資産"),
-        y=alt.Y("金額:Q", title="金額（円）", scale=alt.Scale(domain=[0, max(df['現在の残高'].max() + 100000, 1500000)], nice=True)),
+        y=alt.Y("金額:Q", title="金額（円）", scale=alt.Scale(domain=[0, max(df['現在の残高'].max() + 100000, 500000)], nice=True)),
         color=alt.Color(
             "資産",
             scale=alt.Scale(range=["#BF99ED", "#F9DA25", "#40E8CB"]),
