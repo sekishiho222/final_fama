@@ -108,14 +108,12 @@ st.markdown(
 conn = sqlite3.connect('famafinancial_250325.db')
 c = conn.cursor()
 #ロゴをよみこみ
-file_path = st.file_uploader('', type=['png', 'jpg', 'jpeg'])
 img = Image.open('logo.jpg')
 st.image(img)
 original_size = img.size
 resize_width = 100
 resized = img.resize((resize_width, int(original_size[1]/(original_size[0]/resize_width))))
-#アプリ名称を記載
-st.markdown('<div class="header">金融資産管理アプリ</div>', unsafe_allow_html=True)
+
 #h1を追記
 st.markdown('<div class="h1">　収支入力と現在保有の金融資産</div>', unsafe_allow_html=True)
 # Streamlitでカレンダーを表示
